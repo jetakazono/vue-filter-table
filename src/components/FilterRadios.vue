@@ -3,13 +3,12 @@ const emit = defineEmits(['filter'])
 
 const filter = (e) => {
   emit('filter', e.target.value)
-  console.log(e.target.value)
 }
 </script>
 
 <template>
   <label class="flex mr-4 items-center flex-nowrap">
-    <input type="radio" name="show" value="all" @change="filter" />
+    <input type="radio" name="show" value="all" checked @change="filter" />
     <span class="whitespace-nowrap ml-1">Show all</span>
   </label>
   <label class="flex mr-4 items-center flex-nowrap">
