@@ -15,12 +15,11 @@ const props = defineProps({
 })
 
 const filteredItems = computed(() => {
-  let items = props.items
+  let items = [...props.items]
 
   switch (radioFilter.value) {
     case 'today':
       items = items.filter((item) => new Date(item.due_at).getDate() === new Date().getDate())
-
       break
 
     case 'past':
@@ -40,6 +39,8 @@ const filteredItems = computed(() => {
     )
   return items
 })
+
+
 
 const handleSearch = (search) => {
   searchFilter.value = search
