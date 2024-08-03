@@ -40,8 +40,6 @@ const filteredItems = computed(() => {
   return items
 })
 
-
-
 const handleSearch = (search) => {
   searchFilter.value = search
 }
@@ -60,7 +58,7 @@ const handleCheckboxFilter = (filter) => {
 
 <template>
   <div class="bg-white relative border rounded-lg">
-    <div class="flex items-center justify-between">
+    <div class="flex items-center justify-between flex-col md:flex-row">
       <SearchForm @search="handleSearch" />
 
       <div class="flex items-center justify-end text-sm font-semibold">
